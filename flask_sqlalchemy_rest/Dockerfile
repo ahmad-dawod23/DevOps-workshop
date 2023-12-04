@@ -1,6 +1,4 @@
-FROM python:3.10
-
-RUN apt-get update 
+FROM python
 
 COPY . /python-flask
 
