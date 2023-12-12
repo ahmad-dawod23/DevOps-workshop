@@ -1,4 +1,4 @@
-FROM php:7.2-apache
+FROM php-apache
 WORKDIR /var/www/html
 COPY index.php /var/www/html
 COPY . /var/www/html
