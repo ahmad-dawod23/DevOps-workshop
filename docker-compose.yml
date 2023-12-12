@@ -3,17 +3,17 @@ services:
     php-apache-environment:
         container_name: php-apache
         build:
+            context: ./VideoTube
             dockerfile: Dockerfile
         depends_on:
             - db
         volumes:
-            - ./php/src:/var/www/html/
+            - ./VideoTube/:/var/www/html/
         ports:
             - 4000:80
     db:
         container_name: db
-        image: mysql
-        restart: always
+        image: mysql:5.7
         environment:
             MYSQL_ROOT_PASSWORD: yes
             MYSQL_DATABASE: VideoTube

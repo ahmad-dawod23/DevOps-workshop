@@ -102,5 +102,6 @@ docker rm -f $(docker ps -aq)
 #Print the last 100 lines of a container’s logs
 docker logs --tail 100 web
 
-
+# How to run a docker compose file:
+docker-compose -f docker-compose.yml up
 
