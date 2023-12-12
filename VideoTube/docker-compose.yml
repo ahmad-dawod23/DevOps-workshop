@@ -3,7 +3,6 @@ services:
     php-apache-environment:
         container_name: php-apache
         build:
-            context: ./VideoTube
             dockerfile: Dockerfile
         depends_on:
             - db
