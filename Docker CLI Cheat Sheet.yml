@@ -105,3 +105,5 @@ docker logs --tail 100 web
 # How to run a docker compose file:
 docker-compose -f docker-compose.yml up
 
+# How to stop a composed docker container:
+docker-compose -f docker-compose.yml down
