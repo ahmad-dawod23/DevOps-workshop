@@ -1,0 +1,218 @@
+sudo apt install vim git -y
+
+git clone https://github.com/sandervanvugt/cka
+
+cd cka
+
+sudo ./setup-container.sh
+
+sudo ./setup-kubetools.sh
+
+#control node only:
+
+sudo kubeadm init 
+
+
+
+
+ mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+Alternatively, if you are the root user, you can run:
+
+  export KUBECONFIG=/etc/kubernetes/admin.conf
+
+You should now deploy a pod network to the cluster.
+Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+Then you can join any number of worker nodes by running the following on each as root:
+
+sudo kubeadm join 192.168.1.145:6443 --token hmfzle.ho30mm6tyr6jeyis \
+        --discovery-token-ca-cert-hash sha256:6e0e55b9bf8bce899f28c2fde4afb7990e4e7880ebd82c846e7dccbca4a2332f
+		
+		
+#control node only:		
+kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/manifests/calico.yaml
+
+
+#control node only when the initialastion does not work, you can reset it:
+
+sudo kubeadm init reset
+
+#create tokens for workers to join:
+sudo kubeadm token create --print-join-command
+
+
+
+
+Cluster Information:
+
+    Check Kubernetes Version:
+
+    
+
+kubectl version
+
+Display Cluster Information:
+
+
+
+    kubectl cluster-info
+
+Managing Resources:
+
+    Create a Resource from File:
+
+    
+
+kubectl apply -f <filename.yaml>
+
+Delete a Resource:
+
+
+
+kubectl delete <resource_type> <resource_name>
+
+Get Resources:
+
+
+
+kubectl get <resource_type>
+
+Describe a Resource:
+
+
+
+    kubectl describe <resource_type> <resource_name>
+
+Pods:
+
+    List Pods:
+
+    
+
+kubectl get pods
+
+Get Pod Logs:
+
+
+
+kubectl logs <pod_name>
+
+Execute Command in Pod:
+
+
+
+    kubectl exec -it <pod_name> -- <command>
+
+Deployments:
+
+    List Deployments:
+
+    
+
+kubectl get deployments
+
+Scale Deployment:
+
+
+
+    kubectl scale deployment <deployment_name> --replicas=<replica_count>
+
+Services:
+
+    List Services:
+
+    
+
+kubectl get services
+
+Expose a Deployment as a Service:
+
+
+
+    kubectl expose deployment <deployment_name> --type=NodePort --port=<port>
+
+Configuration:
+
+    Edit Configuration:
+
+    
+
+kubectl edit <resource_type> <resource_name>
+
+View Config Maps:
+
+
+
+    kubectl get configmaps
+
+Namespaces:
+
+    List Namespaces:
+
+    
+
+kubectl get namespaces
+
+Switch Namespace:
+
+
+
+    kubectl config set-context --current --namespace=<namespace>
+
+Contexts and Configuration:
+
+    List Contexts:
+
+    
+
+kubectl config get-contexts
+
+Switch Context:
+
+
+
+kubectl config use-context <context_name>
+
+View Kubeconfig Information:
+
+
+
+    kubectl config view
+
+Health Checks:
+
+    Check Cluster Nodes:
+
+    
+
+kubectl get nodes
+
+View Pod Health:
+
+
+
+kubectl get pods --field-selector=status.phase=Running
+
+Check Events:
+
+
+
+    kubectl get events
+
+Debugging:
+
+    Debugging Pods with Shell:
+
+    
+
+kubectl debug <pod_name> -it --image=busybox -- sh
+
+Port Forwarding:
+
+
+
+kubectl port-forward <pod_name> <local_port>:<pod_port>
