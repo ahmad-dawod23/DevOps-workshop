@@ -5,103 +5,136 @@ Build an Image from a Dockerfile
 
 `docker build -t <image_name>`
 
-# Build an Image from a Dockerfile without the cache
-`docker build -t <image_name> . –no-cache
+Build an Image from a Dockerfile without the cache
 
-# List local images
-`docker images
+`docker build -t <image_name> . –no-cache`
 
-# Delete an Image
-`docker rmi <image_name>
+List local images
 
-# Remove all unused images
-`docker image prune
+`docker images`
 
-# Build an image from the Dockerfile in the current directory and tag the image
-`docker build -t myimage:1.0 .
+ Delete an Image
+ 
+`docker rmi <image_name>`
 
-# List all images that are locally stored with the Docker Engine
-`docker image ls
+ Remove all unused images
+ 
+`docker image prune`
 
-# Delete an image from the local image store
-`docker image rm alpine:3.4
+ Build an image from the Dockerfile in the current directory and tag the image
+ 
+`docker build -t myimage:1.0 .`
 
-# Pull an image from a registry
-`docker pull myimage:1.0
+ List all images that are locally stored with the Docker Engine
+ 
+`docker image ls`
 
-# Retag a local image with a new image name and tag
-`docker tag myimage:1.0 myrepo/myimage:2.0
+ Delete an image from the local image store
+ 
+`docker image rm alpine:3.4`
 
-# Push an image to a registry
-`docker push myrepo/myimage:2.0
+ Pull an image from a registry
+ 
+`docker pull myimage:1.0`
 
-# Containers:
+ Retag a local image with a new image name and tag
+ 
+`docker tag myimage:1.0 myrepo/myimage:2.0`
 
-# Create and run a container from an image, with a custom name:
-`docker run --name <container_name> <image_name>
+ Push an image to a registry
+ 
+`docker push myrepo/myimage:2.0`
 
-# Run a container with and publish a container’s port(s) to the host.
-`docker run -p <host_port>:<container_port> <image_name>
+## Containers:
 
-# Run a container in the background
-`docker run -d <image_name>
+ Create and run a container from an image, with a custom name:
+ 
+`docker run --name <container_name> <image_name>`
 
-# `docker run for a webapp: 
-`docker run -p 5000:5000 -d --name [container name] [container id]   
+ Run a container with and publish a container’s port(s) to the host.
+ 
+`docker run -p <host_port>:<container_port> <image_name>`
 
-# sql server run:
-`docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=ahmad@123" -e "MSSQL_PID=Express" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+ Run a container in the background
+ 
+`docker run -d <image_name>`
 
-# mysql run:
-`docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=ahmad@123 -d 5a4e492065c7
+ docker run for a webapp: 
+ 
+`docker run -p 5000:5000 -d --name [container name] [container id]`
 
-# Start or stop an existing container:
-`docker start|stop <container_name> (or <container-id>)
+ sql server run:
+ 
+`docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=ahmad@123" -e "MSSQL_PID=Express" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest`
 
-# Remove a stopped container:
-`docker rm <container_name>
+ mysql run:
+ 
+`docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=ahmad@123 -d 5a4e492065c7`
 
-# Open a shell inside a running container:
-`docker exec -it <container_name> sh
+ Start or stop an existing container:
+ 
+`docker start|stop <container_name> (or <container-id>)`
 
-# Fetch and follow the logs of a container:
-`docker logs -f <container_name>
+ Remove a stopped container:
+ 
+`docker rm <container_name>`
 
-# To inspect a running container:
-`docker inspect <container_name> (or <container_id>)
+ Open a shell inside a running container:
+ 
+`docker exec -it <container_name> sh`
 
-# To list currently running containers:
-`docker ps
+ Fetch and follow the logs of a container:
+ 
+`docker logs -f <container_name>`
 
-# List all `docker containers (running and stopped):
-`docker ps --all
+ To inspect a running container:
+ 
+`docker inspect <container_name> (or <container_id>)`
 
-# View resource usage stats
-`docker stats
+ To list currently running containers:
+ 
+`docker ps`
 
-# copy files into a containers:
-`docker cp [file] [container name]:/[file]
+ List all docker containers (running and stopped):
+ 
+`docker ps --all`
 
-# `docker rename container:
-`docker rename flask_restapi flask_webservice
+ View resource usage stats
+ 
+`docker stats`
 
-# Stop a running container through SIGKILL
-`docker container kill web
+ copy files into a containers:
+ 
+`docker cp [file] [container name]:/[file]`
 
-# List the networks
-`docker network ls
+ docker rename container:
+ 
+`docker rename flask_restapi flask_webservice`
 
-# List the running containers (add --all to include stopped containers)
-`docker ls
+ Stop a running container through SIGKILL
+ 
+`docker container kill web`
 
-# Delete all running and stopped containers
-`docker rm -f $(docker ps -aq)
+ List the networks
+ 
+`docker network ls`
 
-# Print the last 100 lines of a container’s logs
-`docker logs --tail 100 web
+ List the running containers (add --all to include stopped containers)
+ 
+`docker ls`
 
-# How to run a `docker compose file:
-`docker-compose -f docker-compose.yml up
+ Delete all running and stopped containers
+ 
+`docker rm -f $(docker ps -aq)`
 
-# How to stop a composed `docker container:
-`docker-compose -f docker-compose.yml down
+ Print the last 100 lines of a container’s logs
+ 
+`docker logs --tail 100 web`
+
+ How to run a docker compose file:
+ 
+`docker-compose -f docker-compose.yml up`
+
+ How to stop a composed docker container:
+ 
+`docker-compose -f docker-compose.yml down`
