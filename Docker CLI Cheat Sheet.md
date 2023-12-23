@@ -34,9 +34,6 @@ docker tag myimage:1.0 myrepo/myimage:2.0
 # Push an image to a registry
 docker push myrepo/myimage:2.0
 
-#======================================================================
-
-
 # Containers:
 
 # Create and run a container from an image, with a custom name:
