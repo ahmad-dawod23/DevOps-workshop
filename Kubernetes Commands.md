@@ -2,17 +2,17 @@
 
 #Minikube:
 
-git clone https://gitlab.com/nanuchi/youtube-tutorial-series
+	git clone https://gitlab.com/nanuchi/youtube-tutorial-series
 
-minikube config set memory 2048 
+	minikube config set memory 2048 
 
-minikube config set cpus 4 
+	minikube config set cpus 4 
 
-minikube start
+	minikube start
 
-minikube delete
+	minikube delete
 
-minikube stop
+	minikube stop
 
 
 #K8s
