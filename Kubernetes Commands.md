@@ -1,3 +1,22 @@
+
+
+#Minikube:
+
+git clone https://gitlab.com/nanuchi/youtube-tutorial-series
+
+minikube config set memory 2048 
+
+minikube config set cpus 4 
+
+minikube start
+
+minikube delete
+
+minikube stop
+
+
+#K8s
+
 sudo apt install vim git -y
 
 git clone https://github.com/sandervanvugt/cka
@@ -11,8 +30,6 @@ sudo ./setup-kubetools.sh
 #control node only:
 
 sudo kubeadm init 
-
-
 
 
  mkdir -p $HOME/.kube
