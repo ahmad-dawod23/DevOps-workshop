@@ -41,9 +41,12 @@ List local images
  
 `docker tag myimage:1.0 myrepo/myimage:2.0`
 
+`docker tag docker-workshop-php-apache-environment ahmadd92/ahmad_public_repo:videotube`
+
  Push an image to a registry
  
 `docker push myrepo/myimage:2.0`
+
 
 ## Containers:
 
@@ -138,3 +141,6 @@ List local images
  How to stop a composed docker container:
  
 `docker-compose -f docker-compose.yml down`
+
+
+
