@@ -3,6 +3,8 @@
 # Minikube:
 
 	git clone https://gitlab.com/nanuchi/youtube-tutorial-series
+	
+	cd /youtube-tutorial-series/demo-kubernetes-components
 
 	minikube config set memory 2048 
 
