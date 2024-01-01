@@ -1,6 +1,6 @@
 
 
-#Minikube:
+# Minikube:
 
 	git clone https://gitlab.com/nanuchi/youtube-tutorial-series
 
@@ -15,75 +15,61 @@
 	minikube stop
 
 
-#K8s
+# K8s
+installtion of K8s cluster
 
-sudo apt install vim git -y
+	sudo apt install vim git -y
 
-git clone https://github.com/sandervanvugt/cka
+	git clone https://github.com/sandervanvugt/cka
 
-cd cka
+	cd cka
 
-sudo ./setup-container.sh
+	sudo ./setup-container.sh
 
-sudo ./setup-kubetools.sh
+	sudo ./setup-kubetools.sh
 
-#control node only:
+	control node only:
 
-sudo kubeadm init 
+	sudo kubeadm init 
 
-
- mkdir -p $HOME/.kube
-  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+	mkdir -p $HOME/.kube
+	sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+	sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 Alternatively, if you are the root user, you can run:
 
-  export KUBECONFIG=/etc/kubernetes/admin.conf
-
-You should now deploy a pod network to the cluster.
-Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
-  https://kubernetes.io/docs/concepts/cluster-administration/addons/
-
-Then you can join any number of worker nodes by running the following on each as root:
+	export KUBECONFIG=/etc/kubernetes/admin.conf
 
 		
-		
-#control node only:		
-kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/manifests/calico.yaml
+applying calico's yaml file in (control node only):		
+	kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.1/manifests/calico.yaml
 
 
-#control node only when the initialastion does not work, you can reset it:
+control node only when the initialastion does not work, you can reset it:
 
-sudo kubeadm init reset
+	sudo kubeadm init reset
 
-#create tokens for workers to join:
-sudo kubeadm token create --print-join-command
+create tokens for workers to join:
+	sudo kubeadm token create --print-join-command
+	
+	kubectl create deploy -h
 
-
-kubectl create deploy -h
-
- # Create a deployment named my-dep that runs the nginx image with 3 replicas
- kubectl create deployment myngnx --image=nginx --replicas=3
+Create a deployment named my-dep that runs the nginx image with 3 replicas
+	kubectl create deployment myngnx --image=nginx --replicas=3
 
 
 
-Create a deployment with the specified name.
+Create a deployment named my-dep that runs the busybox image
+	kubectl create deployment my-dep --image=busybox
 
-Aliases:
-deployment, deploy
+Create a deployment with a command
+	kubectl create deployment my-dep --image=busybox -- date
 
-Examples:
-  # Create a deployment named my-dep that runs the busybox image
-  kubectl create deployment my-dep --image=busybox
+Create a deployment named my-dep that runs the nginx image with 3 replicas
+	kubectl create deployment my-dep --image=nginx --replicas=3
 
-  # Create a deployment with a command
-  kubectl create deployment my-dep --image=busybox -- date
-
-  # Create a deployment named my-dep that runs the nginx image with 3 replicas
-  kubectl create deployment my-dep --image=nginx --replicas=3
-
-  # Create a deployment named my-dep that runs the busybox image and expose port 5701
-  kubectl create deployment my-dep --image=busybox --port=5701
+Create a deployment named my-dep that runs the busybox image and expose port 5701
+	kubectl create deployment my-dep --image=busybox --port=5701
 
 Options:
     --allow-missing-template-keys=true:
@@ -130,9 +116,7 @@ Options:
         validation, silently dropping any unknown or duplicate fields.
 
 Usage:
-  kubectl create deployment NAME --image=image -- [COMMAND] [args...] [options]
-
-Use "kubectl options" for a list of global command-line options (applies to all commands).
+	kubectl create deployment NAME --image=image -- [COMMAND] [args...] [options]
 
 
 
