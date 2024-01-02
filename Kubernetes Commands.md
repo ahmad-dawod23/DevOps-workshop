@@ -16,7 +16,6 @@
 
 	minikube stop
 
-
 # K8s
 installtion of K8s cluster
 
