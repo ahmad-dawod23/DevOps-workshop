@@ -16,7 +16,11 @@
 
 	minikube stop
 	
-	minikube service <service-name> --url
+	minikube service mongo-express-service --url
+	
+	ps -ef | grep ahmad@127.0.0.1
+	
+	ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -N ahmad@127.0.0.1 -p 22 -i /Users/FOO/.minikube/machines/minikube/id_rsa -L 8090:192.168.49.2:30000
 
 # K8s
 installtion of K8s cluster
