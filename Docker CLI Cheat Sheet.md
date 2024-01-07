@@ -136,7 +136,7 @@ List local images
 
  How to run a docker compose file:
  
-`docker-compose -f docker-compose.yml up`
+`docker-compose -f docker-compose.yaml up`
 
  How to stop a composed docker container:
  

@@ -11,13 +11,18 @@ services:
             - ./VideoTube/:/var/www/html/
         ports:
             - 4000:80
+        env_file:
+            - .env
     db:
         container_name: db
         image: mysql:5.7
         environment:
-            MYSQL_ROOT_PASSWORD: yes
-            MYSQL_DATABASE: VideoTube
-            MYSQL_USER: newuser
-            MYSQL_PASSWORD: yes
+            MYSQL_HOST: ${MYSQL_HOST}
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${MYSQL_DATABASE}
+            MYSQL_USER: ${MYSQL_USER}
+            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
         ports:
             - "3306:3306"
+        env_file:
+            - .env
