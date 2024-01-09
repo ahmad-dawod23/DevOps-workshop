@@ -45,7 +45,7 @@ List local images
 
  Push an image to a registry
  
-`docker push myrepo/myimage:2.0`
+`docker push ahmadd92/ahmad_public_repo:videotube`
 
 
 ## Containers:

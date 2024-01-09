@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: videotube
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: videotube
+  template:
+    metadata:
+      labels:
+        app: videotube
+    spec:
+      containers:
+      - name: videotube
+        image: ahmadd92/ahmad_public_repo:videotube
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: videotube-service
+spec:
+  selector:
+    app: videotube
+  ports:
+    - protocol: TCP
+      port: 8083
+      targetPort: 80
+  type: LoadBalancer

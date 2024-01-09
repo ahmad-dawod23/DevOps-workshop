@@ -11,6 +11,12 @@ date_default_timezone_set("Europe/Prague");
     $db_pwd  = getenv('MYSQL_PASSWORD', true) ?: getenv('MYSQL_PASSWORD');
 
 
+    echo $db_host;
+    echo $db_name;
+    echo $db_user;
+    echo $db_pwd;
+
+
 try {
 	$string="mysql:dbname={$db_name};host={$db_host}";
     $con = new PDO($string, $db_user, $db_pwd);
