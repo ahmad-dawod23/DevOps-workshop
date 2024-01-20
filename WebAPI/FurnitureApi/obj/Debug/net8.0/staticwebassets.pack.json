@@ -1,0 +1,233 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\bb1.jpg",
+      "PackagePath": "staticwebassets\\bb1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\bb2.jpg",
+      "PackagePath": "staticwebassets\\bb2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\bb3.jpg",
+      "PackagePath": "staticwebassets\\bb3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\bb4.jpg",
+      "PackagePath": "staticwebassets\\bb4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\bb5.jpg",
+      "PackagePath": "staticwebassets\\bb5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\bb6.jpg",
+      "PackagePath": "staticwebassets\\bb6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\bb7.jpg",
+      "PackagePath": "staticwebassets\\bb7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\bb8.jpg",
+      "PackagePath": "staticwebassets\\bb8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\bb9.jpg",
+      "PackagePath": "staticwebassets\\bb9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\bd1.jpg",
+      "PackagePath": "staticwebassets\\bd1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\bd2.png",
+      "PackagePath": "staticwebassets\\bd2.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\bd3.jpg",
+      "PackagePath": "staticwebassets\\bd3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\bd4.jpg",
+      "PackagePath": "staticwebassets\\bd4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\bd5.jpg",
+      "PackagePath": "staticwebassets\\bd5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\bd6.jpg",
+      "PackagePath": "staticwebassets\\bd6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\bd7.jpg",
+      "PackagePath": "staticwebassets\\bd7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\bd8.jpg",
+      "PackagePath": "staticwebassets\\bd8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\c1.jpg",
+      "PackagePath": "staticwebassets\\c1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\c2.jpg",
+      "PackagePath": "staticwebassets\\c2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\c3.jpg",
+      "PackagePath": "staticwebassets\\c3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\c4.jpg",
+      "PackagePath": "staticwebassets\\c4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\c5.jpg",
+      "PackagePath": "staticwebassets\\c5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\cb1.jpg",
+      "PackagePath": "staticwebassets\\cb1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\cb14.png",
+      "PackagePath": "staticwebassets\\cb14.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\cb2.jpg",
+      "PackagePath": "staticwebassets\\cb2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\cb3.jpg",
+      "PackagePath": "staticwebassets\\cb3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\cb4.jpg",
+      "PackagePath": "staticwebassets\\cb4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\cb5.jpg",
+      "PackagePath": "staticwebassets\\cb5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\chair1.png",
+      "PackagePath": "staticwebassets\\chair1.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\chair2.png",
+      "PackagePath": "staticwebassets\\chair2.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\chair3.png",
+      "PackagePath": "staticwebassets\\chair3.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\chair4.png",
+      "PackagePath": "staticwebassets\\chair4.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\chair5.png",
+      "PackagePath": "staticwebassets\\chair5.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\chair6.png",
+      "PackagePath": "staticwebassets\\chair6.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\chair7.png",
+      "PackagePath": "staticwebassets\\chair7.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\chair8.png",
+      "PackagePath": "staticwebassets\\chair8.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\dining1.png",
+      "PackagePath": "staticwebassets\\dining1.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\dining2.png",
+      "PackagePath": "staticwebassets\\dining2.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\dining3.png",
+      "PackagePath": "staticwebassets\\dining3.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\dining4.png",
+      "PackagePath": "staticwebassets\\dining4.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\mirror1.png",
+      "PackagePath": "staticwebassets\\mirror1.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\mirror2.png",
+      "PackagePath": "staticwebassets\\mirror2.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\mirror3.png",
+      "PackagePath": "staticwebassets\\mirror3.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\mirror4.png",
+      "PackagePath": "staticwebassets\\mirror4.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\sb1.jpg",
+      "PackagePath": "staticwebassets\\sb1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\sb2.jpg",
+      "PackagePath": "staticwebassets\\sb2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\sb3.jpg",
+      "PackagePath": "staticwebassets\\sb3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\sb4.jpg",
+      "PackagePath": "staticwebassets\\sb4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\sofa1.png",
+      "PackagePath": "staticwebassets\\sofa1.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\sofa2.png",
+      "PackagePath": "staticwebassets\\sofa2.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\sofa3.png",
+      "PackagePath": "staticwebassets\\sofa3.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\sofa4.png",
+      "PackagePath": "staticwebassets\\sofa4.png"
+    },
+    {
+      "Id": "C:\\Users\\ahmad\\Documents\\GitHub\\DevOps-workshop\\WebAPI\\FurnitureApi\\wwwroot\\sofa5.png",
+      "PackagePath": "staticwebassets\\sofa5.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.FurnitureApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.FurnitureApi.props",
+      "PackagePath": "build\\FurnitureApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.FurnitureApi.props",
+      "PackagePath": "buildMultiTargeting\\FurnitureApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.FurnitureApi.props",
+      "PackagePath": "buildTransitive\\FurnitureApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
