@@ -2,7 +2,7 @@
 Personal DevOps workshop that contains a relevent cheat cheet for docker commands and a .Net WebAPI project added to be tested with it. 
 
 Goals:
-1) ~~Containarize the app and push the container to a docker hub repo, use the repo to deploy the API on a kubernete cluster with a deployment manifest.~~ Done, WebAPI.yaml manifest file included.
+1) Containarize the app and push the container to a docker hub repo, use the repo to deploy the API on a kubernete cluster with a deployment manifest. Done, WebAPI.yaml manifest file included.
 
 2) Make a repo to spin up a kubernetes cluster on my laptop. Add commands to easily tear it down and also install some things like argo and other services.
 
