@@ -24,6 +24,10 @@ spec:
           env:
             - name: ASPNETCORE_URLS
               value: http://+:80
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Production
+            - name: AppSettings__ConnectionStrings__FurnitureDbConnection # PATH OF YOUR VARIABLE INSIDE appsettings.json
+              value: Server=192.168.1.74; Database=IKEAAPP; User=sa; Password=test;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False            
 ---
 apiVersion: v1
 kind: Service
