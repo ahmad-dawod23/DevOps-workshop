@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FurnitureApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86ceab6b99b859a1b9bf3150ac2a877514dd0de3")]
 [assembly: System.Reflection.AssemblyProductAttribute("FurnitureApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FurnitureApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
