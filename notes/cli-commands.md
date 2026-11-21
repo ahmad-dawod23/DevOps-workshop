@@ -1,78 +1,185 @@
-### install hyperhit and minikube
-`brew update`
+# Minikube & `kubectl` CLI Commands
 
-`brew install hyperkit`
+A step-by-step CLI walkthrough for installing Minikube, managing a local cluster, deploying sample apps (`nginx` and `mongo`), and checking resource metrics.
 
-`brew install minikube`
+> For a broader Kubernetes reference, see [Kubernetes Commands.md](./Kubernetes%20Commands.md).
 
-`kubectl`
+## Table of Contents
 
-`minikube`
+- [Install Minikube & `kubectl` (macOS)](#install-minikube--kubectl-macos)
+- [Start & Verify the Cluster](#start--verify-the-cluster)
+- [Reset & Debug Minikube](#reset--debug-minikube)
+- [Inspect Cluster Resources](#inspect-cluster-resources)
+- [Create & Manage Deployments](#create--manage-deployments)
+- [Debugging Pods](#debugging-pods)
+- [Working with YAML Manifests](#working-with-yaml-manifests)
+- [Metrics (`kubectl top`)](#metrics-kubectl-top)
 
-### create minikube cluster
-`minikube start --vm-driver=hyperkit`
+---
 
-`kubectl get nodes`
+## Install Minikube & `kubectl` (macOS)
 
-`minikube status`
+```bash
+# Update Homebrew
+brew update
 
-`kubectl version`
+# Install Minikube and kubectl
+brew install minikube kubectl
 
-### delete cluster and restart in debug mode
-`minikube delete`
+# (Optional, Intel macOS only) Install HyperKit driver
+# Note: Docker Desktop (--driver=docker) is recommended on modern macOS / Apple Silicon
+brew install hyperkit
 
-`minikube start --vm-driver=hyperkit --v=7 --alsologtostderr`
+# Verify installations
+minikube version
+kubectl version --client
+```
 
-`minikube status`
+---
 
-### kubectl commands
-`kubectl get nodes`
+## Start & Verify the Cluster
 
-`kubectl get pod`
+```bash
+# Start Minikube (uses default driver, e.g. docker; use --driver=hyperkit if using HyperKit)
+minikube start
+# Or explicitly specify a driver:
+minikube start --driver=hyperkit
 
-`kubectl get services`
+# Check Minikube cluster status
+minikube status
 
-`kubectl create deployment nginx-depl --image=nginx`
+# Verify kubectl can communicate with the cluster
+kubectl version
+kubectl get nodes
+```
 
-`kubectl get deployment`
+---
 
-`kubectl get replicaset`
+## Reset & Debug Minikube
 
-`kubectl edit deployment nginx-depl`
+If the cluster fails to start or gets into a bad state, delete it and restart with verbose logging:
 
-### debugging
-`kubectl logs {pod-name}`
+```bash
+# Delete the existing Minikube cluster
+minikube delete
 
-`kubectl exec -it {pod-name} -- bin/bash`
+# Restart with verbose debug output
+minikube start --driver=hyperkit --v=7 --alsologtostderr
 
-### create mongo deployment
-`kubectl create deployment mongo-depl --image=mongo`
+# Verify cluster health
+minikube status
+```
 
-`kubectl logs mongo-depl-{pod-name}`
+---
 
-`kubectl describe pod mongo-depl-{pod-name}`
+## Inspect Cluster Resources
 
-### delete deplyoment
-`kubectl delete deployment mongo-depl`
+```bash
+# List nodes, pods, services, deployments, and replicasets
+kubectl get nodes
+kubectl get pods
+kubectl get services
+kubectl get deployments
+kubectl get replicasets
 
-`kubectl delete deployment nginx-depl`
+# Quick overview of common resources at once
+kubectl get all
+```
 
-### create or edit config file
-`vim nginx-deployment.yaml`
+---
 
-`kubectl apply -f nginx-deployment.yaml`
+## Create & Manage Deployments
 
-`kubectl get pod`
+### Nginx Deployment
 
-`kubectl get deployment`
+```bash
+# Create an nginx deployment
+kubectl create deployment nginx-depl --image=nginx
 
-### delete with config
-`kubectl delete -f nginx-deployment.yaml`
+# Verify the deployment, replicaset, and pod
+kubectl get deployment
+kubectl get replicaset
+kubectl get pods
 
-#Metrics
+# Edit the live deployment configuration in your default editor
+kubectl edit deployment nginx-depl
+```
 
-`kubectl top` The kubectl top command returns current CPU and memory usage for a cluster’s pods or nodes, or for a particular pod or node if specified.
+### MongoDB Deployment
 
+```bash
+# Create a MongoDB deployment
+kubectl create deployment mongo-depl --image=mongo
 
+# Find the generated pod name
+kubectl get pods
 
+# Inspect pod logs and detailed events
+kubectl logs <mongo_pod_name>
+kubectl describe pod <mongo_pod_name>
+```
 
+### Delete Deployments
+
+```bash
+kubectl delete deployment mongo-depl
+kubectl delete deployment nginx-depl
+```
+
+---
+
+## Debugging Pods
+
+```bash
+# View logs for a pod (add -f to stream live logs)
+kubectl logs <pod_name>
+kubectl logs -f <pod_name>
+
+# Inspect pod status, containers, and recent events
+kubectl describe pod <pod_name>
+
+# Open an interactive shell inside a running pod
+kubectl exec -it <pod_name> -- /bin/bash
+# (use /bin/sh if bash is not installed in the container)
+kubectl exec -it <pod_name> -- /bin/sh
+```
+
+---
+
+## Working with YAML Manifests
+
+```bash
+# Create or edit a manifest file
+vim nginx-deployment.yaml
+
+# Apply the manifest to create or update resources
+kubectl apply -f nginx-deployment.yaml
+
+# Verify the created resources
+kubectl get pods
+kubectl get deployments
+
+# Delete all resources defined in the manifest
+kubectl delete -f nginx-deployment.yaml
+```
+
+---
+
+## Metrics (`kubectl top`)
+
+`kubectl top` displays current CPU and memory usage for cluster nodes and pods. It requires `metrics-server` to be running in the cluster.
+
+```bash
+# Enable metrics-server in Minikube (run once)
+minikube addons enable metrics-server
+
+# View CPU and memory usage for nodes
+kubectl top nodes
+
+# View CPU and memory usage for pods (current namespace or all namespaces)
+kubectl top pods
+kubectl top pods -A
+
+# View metrics for a specific pod
+kubectl top pod <pod_name>
+```

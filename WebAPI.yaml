@@ -19,11 +19,11 @@ spec:
         - name: webapicontainer
           image: ahmadd92/ahmad_public_repo:webapidotnet
           ports:
-            - containerPort: 80
+            - containerPort: 8080
               protocol: TCP
           env:
             - name: ASPNETCORE_URLS
-              value: http://+:80
+              value: http://+:8080
             - name: ASPNETCORE_ENVIRONMENT
               value: Production
             - name: AppSettings__ConnectionStrings__FurnitureDbConnection # PATH OF YOUR VARIABLE INSIDE appsettings.json
@@ -40,7 +40,7 @@ spec:
   type: NodePort
   ports:
     - port: 8080
-      targetPort : 80
+      targetPort: 8080
       protocol: TCP
   selector:
     service: webapi
